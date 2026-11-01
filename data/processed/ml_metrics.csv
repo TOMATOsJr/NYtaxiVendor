@@ -1,0 +1,3 @@
+model,roc_auc,pr_auc,brier_score,accuracy,f1_score
+Logistic Regression (Baseline),0.6071,0.8183,0.1711,0.7748,0.8712
+HistGradientBoosting (Prototype),0.6123,0.8231,0.1694,0.7772,0.8728

@@ -1,0 +1,20 @@
+column,dtype,null_pct,sample_values,description
+VendorID,int32,0.00%,"[2, 1, 6]","TPEP provider: 1=Creative Mobile Technologies (CMT), 2=VeriFone"
+tpep_pickup_datetime,datetime64[us],0.00%,"[Timestamp('2024-01-01 00:57:55'), Timestamp('2024-01-01 00:03:00'), Timestamp('2024-01-01 00:17:06'), Timestamp('2024-01-01 00:36:38')]",Timestamp when the taximeter was engaged
+tpep_dropoff_datetime,datetime64[us],0.00%,"[Timestamp('2024-01-01 01:17:43'), Timestamp('2024-01-01 00:09:36'), Timestamp('2024-01-01 00:35:01'), Timestamp('2024-01-01 00:44:56')]",Timestamp when the taximeter was disengaged
+passenger_count,float64,4.73%,"[1.0, 2.0, 0.0, 4.0]",Driver-entered passenger count (NULL on ~4.7% of CMT trips)
+trip_distance,float64,0.00%,"[1.72, 1.8, 4.7, 1.4]",Elapsed trip distance in miles reported by taximeter
+RatecodeID,float64,4.73%,"[1.0, 5.0, 2.0, 4.0]","Final rate code: 1=Standard, 2=JFK, 3=Newark, 4=Nassau/Westchester, 5=Negotiated, 6=Group"
+store_and_fwd_flag,str,4.73%,"['N', 'Y']","Y=trip held in vehicle memory before sending to vendor, N=not"
+PULocationID,int32,0.00%,"[186, 140, 236, 79]",TLC Taxi Zone ID where meter was engaged (pickup)
+DOLocationID,int32,0.00%,"[79, 236, 211, 148]",TLC Taxi Zone ID where meter was disengaged (dropoff)
+payment_type,int64,0.00%,"[2, 1, 4, 3]","1=Credit card, 2=Cash, 3=No charge, 4=Dispute, 5=Unknown, 6=Voided"
+fare_amount,float64,0.00%,"[17.7, 10.0, 23.3, 7.9]",Metered time-and-distance fare in USD
+extra,float64,0.00%,"[1.0, 3.5, 6.0, 2.75]",Rush-hour ($0.50/$1.00) and overnight surcharges
+mta_tax,float64,0.00%,"[0.5, 0.0, -0.5, 1.6]",$0.50 MTA tax automatically triggered based on metered rate
+tip_amount,float64,0.00%,"[0.0, 3.75, 3.0, 2.0]",Credit card tip amount in USD (cash tips are not recorded)
+tolls_amount,float64,0.00%,"[0.0, 6.94, 12.75, 3.18]",Total bridge and tunnel tolls paid during trip
+improvement_surcharge,float64,0.00%,"[1.0, -1.0, 0.0, 0.3]",$0.30 improvement surcharge assessed at flag drop
+total_amount,float64,0.00%,"[22.7, 18.75, 31.3, 17.0]",Total amount charged to rider (excludes cash tips)
+congestion_surcharge,float64,4.73%,"[2.5, 0.0, -2.5, 0.75]",$2.50 NY State congestion surcharge South of 96th St
+Airport_fee,float64,4.73%,"[0.0, 1.75, -1.75]",$1.25 fee for pickups at LaGuardia (LGA) and JFK airports
